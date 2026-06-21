@@ -12,6 +12,8 @@ services:
       - db
     networks:
       - deskgame_network
+    env_file:
+      - .env
 
   # Banco de Dados (MySQL)
   db:
@@ -21,11 +23,29 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: "" # Deixando a senha do root vazia igual ao XAMPP
-      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-      MYSQL_DATABASE: "deskgame"
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_DATABASE: deskgame
     volumes:
       - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - deskgame_network
+
+  # phpMyAdmin para gerenciamento do banco
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: deskgame_phpmyadmin
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root
+      PMA_DB: deskgame
+    depends_on:
+      - db
     networks:
       - deskgame_network
 
@@ -35,7 +55,6 @@ networks:
 
 volumes:
   mysql_data:
-
 # O Docker vai baixar tudo, criar o banco, conectar os
 # arquivos e deixar rodando em segundo plano usando:
 #docker compose up -d
