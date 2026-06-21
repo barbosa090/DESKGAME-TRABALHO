@@ -1,6 +1,7 @@
 <?php
 // se precisar no host aponta exatamente para o nome do serviço do banco de dados que está no seu docker-compose.yml
 // e coloco "db"no $host
+// para manter funcionando localmente http://localhost/DESKGAME-TRABALHO/DESKGAME/
 
 try {
   $pdo = new PDO("mysql:host=localhost;dbname=deskgame;charset=utf8mb4", "root", "");
