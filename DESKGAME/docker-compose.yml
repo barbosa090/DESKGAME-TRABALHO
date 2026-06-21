@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  # Servidor Web (PHP + Apache)
+  web:
+    build: .
+    container_name: deskgame_web
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html/
+    depends_on:
+      - db
+    networks:
+      - deskgame_network
+
+  # Banco de Dados (MySQL)
+  db:
+    image: mysql:8.0
+    container_name: deskgame_db
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "" # Deixando a senha do root vazia igual ao XAMPP
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: "deskgame"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - deskgame_network
+
+networks:
+  deskgame_network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+
+# O Docker vai baixar tudo, criar o banco, conectar os
+# arquivos e deixar rodando em segundo plano usando:
+#docker compose up -d

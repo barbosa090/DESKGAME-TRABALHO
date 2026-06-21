@@ -1,0 +1,133 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0c10; 
+    color: #c5c6c7; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; /* Garante centralização vertical exata */
+}
+
+/* 2. Caixa de Cadastro - Estilo idêntico ao card de login e ao catálogo */
+.login-container {
+    background-color: #1f2833; 
+    border-radius: 8px; 
+    padding: 35px 40px; /* Um pouco mais compacto nas laterais para equilibrar a altura */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); 
+    border: 1px solid #2f3b4c;
+    border-top: 4px solid #463077; /* Linha roxa gamer */
+    width: 100%;
+    max-width: 380px; /* Um pouquinho mais largo para acomodar bem o nome completo */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito Hover no Card */
+.login-container:hover {
+    transform: translateY(-5px); 
+    border-color: #17c5e4; /* Acende com o ciano do seu H2 */
+    box-shadow: 0 10px 25px rgba(23, 197, 228, 0.25); 
+}
+
+/* 3. Título Principal */
+.login-container h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* 4. Textos das Labels */
+.login-container label {
+    display: block;
+    margin-bottom: 6px; /* Espaço ideal para colar no input correspondente */
+    font-size: 14px;
+    color: #66fcf1; /* Ciano Neon */
+    font-weight: 600;
+}
+
+/* 5. Ajuste dos Parágrafos do Formulário */
+.login-container p {
+    margin: 0 0 18px 0; /* Espaçamento equilibrado entre um bloco de campo e outro */
+    padding: 0;
+}
+
+/* Dá um espaço maior especificamente no último parágrafo antes do botão de cadastrar */
+.login-container p:last-of-type {
+    margin-bottom: 25px;
+}
+
+/* 6. Inputs de Texto (Nome, E-mail e Senha) */
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #2f3b4c;
+    border-radius: 5px;
+    background-color: #0b0c10; /* Fundo interno escuro */
+    color: #ffffff; 
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao clicar no campo para digitar */
+.login-container input[type="text"]:focus,
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+    outline: none;
+    border-color: #17c5e4; 
+    box-shadow: 0 0 8px rgba(23, 197, 228, 0.4);
+}
+
+/* 7. Botão de Enviar (Cadastrar) */
+.login-container input[type="submit"] {
+    width: 100%;
+    display: block;
+    background-color: #463077; /* Roxo padrão */
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+/* Hover do Botão */
+.login-container input[type="submit"]:hover {
+    background-color: #17c5e4; /* Inverte para Ciano */
+    color: #0b0c10; 
+    box-shadow: 0 0 15px rgba(23, 197, 228, 0.6); 
+}
+
+/* 8. Caixa de Alerta (Sucesso ou Erro do PHP) */
+.erro-alerta {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    /* Valores padrão para Erro (serão sobrescritos pelo style inline caso seja Sucesso) */
+    color: #ff3333;
+    background-color: #2a1a1a;
+    border: 1px solid #ff3333;
+}
+.login-link {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+            color: #17c5e4;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .login-link:hover {
+            text-decoration: underline;
+        }

@@ -1,0 +1,171 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0c10; 
+    color: #c5c6c7; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+}
+
+h2 {
+    color: #66fcf1; 
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px; 
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================================
+   2. CONTAINER PRINCIPAL (CARD DE LOGIN)
+   ========================================================================= */
+.login-container {
+    background-color: #1f2833; 
+    border-radius: 8px; 
+    padding: 40px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); 
+    border: 1px solid #2f3b4c;
+    border-top: 4px solid #463077; 
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-5px); 
+    border-color: #17c5e4; 
+    box-shadow: 0 10px 25px rgba(23, 197, 228, 0.25); 
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px; 
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #66fcf1; 
+    font-weight: 600;
+}
+
+.login-container p {
+    margin: 0 0 16px 0; 
+    padding: 0;
+}
+
+.login-container p:last-of-type {
+    margin-bottom: 28px; 
+}
+
+
+/* =========================================================================
+   3. CAMPOS DE ENTRADA (EMAIL E SENHA)
+   ========================================================================= */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #2f3b4c;
+    border-radius: 5px;
+    background-color: #0b0c10; 
+    color: #ffffff; 
+    font-size: 15px;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Garante um espaço ideal antes do próximo elemento */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+    outline: none;
+    border-color: #17c5e4; 
+    box-shadow: 0 0 8px rgba(23, 197, 228, 0.4);
+}
+
+
+/* =========================================================================
+   4. BOTÃO DE ENVIO (SUBMIT)
+   ========================================================================= */
+.login-container input[type="submit"] {
+    width: 100%;
+    display: block;
+    background-color: #463077; 
+    color: #ffffff;
+    padding: 14px; 
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #17c5e4; 
+    color: #0b0c10; 
+    box-shadow: 0 0 15px rgba(23, 197, 228, 0.6); 
+}
+
+.erro-alerta {
+    color: #ff3333;
+    background-color: #2a1a1a;
+    padding: 12px;
+    border: 1px solid #ff3333;
+    border-radius: 5px;
+    margin-bottom: 25px; 
+    text-align: center;
+    font-size: 14px;
+}
+
+.cadastro-link-container {
+    margin-top: 25px;       /* Dá um espaço confortável abaixo do botão Entrar */
+    padding-top: 20px;      /* Espaço entre a linha divisória e o texto */
+    border-top: 1px solid rgba(0, 255, 255, 0.15); /* Linha sutil na cor cyan */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;              /* Espaço perfeito entre o texto e o botão de cadastro */
+}
+
+/* Texto "Não tem uma conta?" */
+.texto-divisor {
+    color: #a0a0a0;         /* Um cinza claro neutro que combina com qualquer fundo escuro */
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* Botão "Cadastre-se aqui" combinando com o tema do Login */
+.btn-cadastro {
+    display: inline-block;
+    width: 100%;            /* Ocupa exatamente a mesma largura dos inputs e do botão Entrar */
+    box-sizing: border-box;
+    text-align: center;
+    padding: 12px;          /* Mesma altura padrão de botões de formulário */
+    color: cyan;            /* Cor combinando com o H2 do seu login */
+    text-decoration: none;  /* Remove o sublinhado padrão de link */
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid cyan; /* Borda estilosa com a cor do seu tema */
+    border-radius: 4px;     /* Deixei com 4px que costuma ser o padrão do botão enviar, ajuste se o seu for mais arredondado */
+    background: transparent;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Efeito incrível ao passar o mouse por cima (Hover) */
+.btn-cadastro:hover {
+    background-color: cyan; /* Preenche o botão com a cor do tema */
+    color: #121212;         /* Troca a cor do texto para um cinza escuro/preto para dar leitura */
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.5); /* Efeito de brilho neon gamer */
+    cursor: pointer;
+}

@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.main-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.gamer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f2833;
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #463077; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.logo-txt {
+    color: #66fcf1; 
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 1px;
+}
+.gamer-nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-link {
+            color: #c5c6c7;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #66fcf1; 
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .user-info span {
+    background-color: #0b0c10;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #c5c6c7;
+    border: 1px solid #463077;
+}
+
+.btn-logout {
+    color: #ff3333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.btn-logout:hover {
+    color: #ff6666;
+    text-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
+}

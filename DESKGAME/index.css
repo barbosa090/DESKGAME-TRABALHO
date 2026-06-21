@@ -1,0 +1,141 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.gamer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f2833;
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #463077; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.logo-txt {
+    color: #66fcf1; 
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.gamer-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: #c5c6c7;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #66fcf1;
+    text-shadow: 0 0 8px rgba(102, 252, 241, 0.6);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-info span {
+    background-color: #0b0c10;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #c5c6c7;
+    border: 1px solid #463077;
+}
+
+.btn-logout {
+    color: #ff3333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.btn-logout:hover {
+    color: #ff6666;
+    text-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.pc-card {
+    background-color: #1f2833;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2f3b4c;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pc-card:hover {
+    transform: translateY(-8px);
+    border-color: #66fcf1;
+}
+
+.pc-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #0b0c10;
+    margin-bottom: 15px;
+}
+
+.pc-card h3 {
+    color: #fff;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.pc-specs {
+    text-align: left;
+    font-size: 13px;
+    color: #c5c6c7;
+    background-color: #0b0c10;
+    padding: 12px;
+    border-radius: 5px;
+    margin: 15px 0;
+    line-height: 1.6;
+    border-left: 3px solid #463077;
+}
+
+.pc-specs strong {
+    color: #66fcf1;
+}
+
+.pc-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ff88;
+    margin-bottom: 5px;
+}
