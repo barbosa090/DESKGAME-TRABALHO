@@ -1,4 +1,3 @@
-
 <?php
 // notebook.php
 if (session_status() === PHP_SESSION_NONE) {
